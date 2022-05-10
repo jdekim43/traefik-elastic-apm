@@ -16,7 +16,7 @@ func TestServiceTracing(t *testing.T) {
 	ctx := context.Background()
 	next := http.HandlerFunc(func(rw http.ResponseWriter, req *http.Request) {})
 
-	handler, err := traefik_elastic_apm.NewServiceTracing(ctx, next, cfg, "service-tracing")
+	handler, err := traefik_elastic_apm.New(ctx, next, cfg, "service-tracing")
 	if err != nil {
 		t.Fatal(err)
 	}

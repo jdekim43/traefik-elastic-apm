@@ -22,7 +22,7 @@ type ServiceTracing struct {
 	name   string
 }
 
-func NewServiceTracing(ctx context.Context, next http.Handler, config *Config, name string) (http.Handler, error) {
+func New(ctx context.Context, next http.Handler, config *Config, name string) (http.Handler, error) {
 	var serviceName = config.ServiceName
 	if len(serviceName) == 0 {
 		serviceName = name
