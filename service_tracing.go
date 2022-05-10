@@ -8,8 +8,8 @@ import (
 )
 
 type Config struct {
-	ServiceName string
-	Environment string
+	ServiceName string `json:"serviceName,omitempty"`
+	Environment string `json:"environment,omitempty"`
 }
 
 func CreateConfig() *Config {
