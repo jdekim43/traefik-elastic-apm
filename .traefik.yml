@@ -1,0 +1,10 @@
+displayName: Traefik Elastic APM Plugins
+type: middleware
+
+import: github.com/jdekim43/traefik-elastic-apm
+
+summary: 'Traefik Elastic APM Plugins'
+
+testData:
+  ServiceName: test-service
+  Environment: development
